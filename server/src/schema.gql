@@ -1,0 +1,38 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ProductDto {
+  id: Float!
+  name: String!
+  price: Float!
+  description: String!
+}
+
+type Query {
+  getAllProducts: [ProductDto!]!
+  getProductsByPrice(body: ProductsByPriceInputRequest!): [ProductDto!]!
+}
+
+input ProductsByPriceInputRequest {
+  min: Float!
+  max: Float!
+}
+
+type Mutation {
+  createNewProduct(body: CreateProductInputRequest!): ProductDto!
+  updateProduct(body: UpdateProductInputRequest!): ProductDto!
+}
+
+input CreateProductInputRequest {
+  name: String!
+  price: Float!
+  description: String!
+}
+
+input UpdateProductInputRequest {
+  name: String!
+  price: Float!
+  description: String!
+  id: Float!
+}
