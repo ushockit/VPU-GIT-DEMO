@@ -1,0 +1,2 @@
+https://githowto.com/ru/setup
+https://git-scm.com/book/ru/v2
